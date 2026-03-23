@@ -101,6 +101,44 @@
 </footer>
 
 <script src="publications.js"></script>
-<script src="blog-teaser.js"></script>
+<script>
+    const list = document.getElementById('publications-list');
+
+    publications.forEach(pub => {
+        const badgeHTML = pub.highlight
+            ? `<span class="pub-badge pub-badge--${pub.highlight.toLowerCase().replace(/\s+/g, '-')}">${pub.highlight}</span>`
+            : '';
+
+        const item = document.createElement('div');
+        item.className = 'pub-item';
+        item.innerHTML = `
+            <div class="pub-title">${pub.title}</div>
+            <div class="pub-authors">${pub.authors}</div>
+            <div class="pub-venue">
+                <a href="${pub.url}" target="_blank">${pub.venue}</a>
+                <span class="pub-year">(${pub.year})</span>
+                ${badgeHTML}
+            </div>
+        `;
+        list.appendChild(item);
+    });
+
+    // Highlight active nav link based on scroll position
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                });
+            }
+        });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+</script>
+
 </body>
 </html>

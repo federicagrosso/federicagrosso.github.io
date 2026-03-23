@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Federica Grosso — Publications">
+    <title>Federica Grosso — Publications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="publications">
+        <h1>Selected Publications</h1>
+        <div id="publications-list">
+            <!-- Rendered by publications.js -->
+        </div>
+        <p class="section-note">
+            Full list on my <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a>
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Federica Grosso</p>
+</footer>
+
+<script src="publications.js"></script>
+<script>
+    const list = document.getElementById('publications-list');
+
+    publications.forEach(pub => {
+        const badgeHTML = pub.highlight
+            ? `<span class="pub-badge pub-badge--${pub.highlight.toLowerCase().replace(/\s+/g, '-')}">${pub.highlight}</span>`
+            : '';
+
+        const item = document.createElement('div');
+        item.className = 'pub-item';
+        item.innerHTML = `
+            <div class="pub-title">${pub.title}</div>
+            <div class="pub-authors">${pub.authors}</div>
+            <div class="pub-venue">
+                <a href="${pub.url}" target="_blank">${pub.venue}</a>
+                <span class="pub-year">(${pub.year})</span>
+                ${badgeHTML}
+            </div>
+        `;
+        list.appendChild(item);
+    });
+</script>
+
+</body>
+</html>

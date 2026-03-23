@@ -1,70 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Federica Grosso</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Federica Grosso — PhD Candidate in Statistical Genetics at IRGB-CNR and Vrije Universiteit Amsterdam">
+    <title>Federica Grosso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container">
 
-    <header class="header">
-      <img src="images/picture.jpg" alt="Profile photo" class="profile-pic">
-      <h1>Federica Grosso</h1>
-      <p class="subtitle">PhD Candidate in Statistical Genetics</p>
-    </header>
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#beyond">Beyond Research</a></li>
+    </ul>
+</nav>
 
-    <section>
-      <h2>About</h2>
-      <p>
-        PhD candidate at Vrije Universiteit Amsterdam working on GWAS and causal inference,
-        with a focus on Mendelian Randomization and longitudinal data.
-      </p>
+<main>
+
+    <!-- ── About ── -->
+    <section id="about">
+        <div class="about-header">
+            <div class="about-header-text">
+                <h1>Federica Grosso</h1>
+                <p class="tagline">PhD Candidate · Statistical Genetics · IRGB-CNR / VU Amsterdam</p>
+            </div>
+            <img src="federica_photo.jpg" alt="Federica Grosso" class="profile-photo">
+        </div>
+
+        <div class="bio-box">
+            <p>👋 Hi, I am Federica Grosso!</p>
+            <p>
+                I am a PhD candidate at <strong>Vrije Universiteit Amsterdam</strong> and a research fellow at <strong>IRGB-CNR</strong>.
+                My work focuses on <em>Mendelian Randomization</em>, genome-wide association studies, and causal inference in longitudinal data.
+            </p>
+            <p>
+                Previously, I completed my MSc in Biostatistics at <strong>University of Milano-Bicocca</strong> and BSc in Mathematics at <strong>University of Milan</strong>.
+            </p>
+            <p><strong>Feel free to reach out via email!</strong> 📧</p>
+        </div>
+
+        <div class="social-links">
+            <a href="mailto:federicagrosso31@gmail.com">📧 Email</a>
+            <a href="https://www.linkedin.com/in/federica-grosso/" target="_blank">🔗 LinkedIn</a>
+            <a href="https://github.com/olgatticus" target="_blank">👾 GitHub</a>
+            <a href="https://scholar.google.com/citations?user=YOURID" target="_blank">👩‍💻 Google Scholar</a>
+        </div>
     </section>
 
-    <section>
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Mendelian Randomization</li>
-        <li>Genome-wide association studies (GWAS)</li>
-        <li>Causal inference</li>
-        <li>Longitudinal data analysis</li>
-      </ul>
+    <hr>
+
+    <!-- ── Publications ── -->
+    <section id="publications">
+        <h2>Selected Publications</h2>
+        <p class="section-note">
+            Full list on my <a href="https://scholar.google.com/citations?user=YOURID" target="_blank">Google Scholar</a>.
+        </p>
+        <div id="publications-list"></div>
     </section>
 
-    <section>
-      <h2>Publications</h2>
-      <p>
-        Grosso F et al. (2025). 
-        <em>Causal relationships between gut microbiome and age-related traits.</em>
-        <br>
-        <a href="https://doi.org/10.18632/aging.206293">View publication</a>
-      </p>
+    <hr>
+
+    <!-- ── Beyond Research ── -->
+    <section id="beyond">
+        <h2>Beyond Research</h2>
+        <p>Some of my interests outside research:</p>
+        <ul>
+            <li>Long walks and hiking in nature</li>
+            <li>Exploring Amsterdam and local culture</li>
+            <li>Music and dancing</li>
+            <li>Traveling and learning new languages</li>
+        </ul>
     </section>
 
-    <section>
-      <h2>Experience</h2>
-      <p><strong>PhD Candidate</strong> – Vrije Universiteit Amsterdam (2025–present)</p>
-      <p><strong>Research Fellow</strong> – IRGB-CNR (2024–2025)</p>
-    </section>
+</main>
 
-    <section>
-      <h2>Education</h2>
-      <p>MSc Biostatistics – University of Milano-Bicocca</p>
-      <p>BSc Mathematics – University of Milan</p>
-    </section>
+<footer>
+    <p>© 2026 Federica Grosso</p>
+</footer>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Email: federicagrosso31@gmail.com</p>
-      <p>
-        <a href="#">LinkedIn</a> |
-        <a href="#">GitHub</a>
-      </p>
-    </section>
+<script>
+const publications = [
+    {
+        title: "Causal relationships between gut microbiome and age-related traits",
+        authors: "Grosso F et al.",
+        venue: "Aging (2025)",
+        url: "https://doi.org/10.18632/aging.206293",
+        year: 2025,
+        highlight: ""
+    },
+    {
+        title: "Two-Sample Mendelian Randomization analysis of microbiome and age traits",
+        authors: "Grosso F et al.",
+        venue: "BioRxiv (2025)",
+        url: "#",
+        year: 2025,
+        highlight: "under review"
+    }
+];
 
-  </div>
+const list = document.getElementById('publications-list');
+publications.forEach(pub => {
+    const badgeHTML = pub.highlight
+        ? `<span class="pub-badge pub-badge--${pub.highlight.toLowerCase().replace(/\s+/g, '-')}">${pub.highlight}</span>`
+        : '';
+
+    const item = document.createElement('div');
+    item.className = 'pub-item';
+    item.innerHTML = `
+        <div class="pub-title">${pub.title}</div>
+        <div class="pub-authors">${pub.authors}</div>
+        <div class="pub-venue">
+            <a href="${pub.url}" target="_blank">${pub.venue}</a>
+            <span class="pub-year">(${pub.year})</span>
+            ${badgeHTML}
+        </div>
+    `;
+    list.appendChild(item);
+});
+</script>
+
 </body>
 </html>

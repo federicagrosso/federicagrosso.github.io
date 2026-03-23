@@ -119,3 +119,29 @@ li { margin-bottom: 0.55rem; }
 .blog-post-item:hover { box-shadow: 0 3px 14px rgba(31,78,121,0.2); }
 
 footer { text-align: center; padding: 1.75rem 2rem; font-size: 0.85rem; color: var(--color-text-secondary); }
+
+/* ── Navigation Menu ── */
+nav ul {
+    display: flex; /* orizzontale */
+    justify-content: center; /* centra i link */
+    gap: 2rem; /* spazio tra i link */
+    list-style: none; /* rimuove i pallini */
+    padding: 1rem 0;
+    border-bottom: 2px solid #003366; /* striscia blu scura */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #0077cc; /* colore accent per hover/attivo */
+}

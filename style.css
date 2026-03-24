@@ -262,14 +262,11 @@ section h1::after {
 }
 
 footer {
-    display: flex;
-    justify-content: center; /* centra orizzontalmente */
-    align-items: center;     /* centra verticalmente se necessario */
-    padding: 2rem;
-    color: var(--secondary);
+    text-align: center;
+    padding: 1.75rem 2rem;
     font-size: 0.85rem;
-    text-align: center;      /* fallback per testo normale */
-    gap: 0.5rem;             /* spazio tra elementi */
+    color: var(--color-text-secondary);
+    border-top: 1px solid var(--color-border);
 }
 
 /* RESPONSIVE */

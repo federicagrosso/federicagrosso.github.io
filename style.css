@@ -305,27 +305,77 @@ footer a:hover {
     top: 0;                    /* allinea verticalmente con il testo */
 }
 
-/* RESPONSIVE */
-/* MOBILE FIXES: navbar e CV list */
 @media (max-width: 768px) {
+
+    /* ABOUT: foto, nome e bio in colonna */
     .about-container {
-        grid-template-columns: 1fr;   /* una sola colonna */
-        text-align: center;           /* centra testo e foto */
-        gap: 1.5rem;                  /* spazio verticale tra foto e bio */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
     }
 
     .about-left {
-        margin-bottom: 0;             /* margine extra non serve */
+        margin-bottom: 0;
+    }
+
+    .profile-photo {
+        width: 140px;
+        height: 140px;
     }
 
     .about-right h1 {
-        font-size: 2rem;              /* riduce leggermente il titolo */
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
     }
 
     .bio p {
-        font-size: 0.95rem;           /* testo leggermente più piccolo */
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 100%;              /* evita overflow */
+        font-size: 0.95rem;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    /* Navbar: tutta sotto, centrata, senza far andare a capo link */
+    nav .nav-container {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;       /* link vanno a capo solo se strettissimo */
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    nav .nav-name {
+        display: none;         /* nome già sopra foto, nascondiamo qui */
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.5rem;
+        white-space: nowrap;
+    }
+
+    /* News e pubblicazioni: full width */
+    #news, #publications {
+        padding: 0 1rem;
+    }
+
+    /* CV rombi più piccoli */
+    .cv-list li::before {
+        font-size: 1rem;
+        left: 0.2rem;
+    }
+
+    .cv-list li {
+        padding-left: 1.5rem;
     }
 }

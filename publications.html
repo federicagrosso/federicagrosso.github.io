@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
             : '';
 
         // Venue in grassetto se non è "Preprint"
-      const venueHTML = pub.venue !== "Preprint"
-    ? `<span class="pub-venue">${pub.venue}</span>`
-    : pub.venue;
+ const venueHTML = pub.venue !== "Preprint" 
+     ? <strong>${pub.venue}</strong> 
+     : pub.venue;
 
         const item = document.createElement('div');
         item.className = 'pub-card';

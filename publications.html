@@ -31,14 +31,14 @@
 
 <main>
 <section id="publications">
-        <h1>Selected Publications</h1>
-        <div id="publications-list">
-            <!-- Rendered by publications.js -->
-        </div>
-        <p class="section-note">
-            Full list on my <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a>
-        </p>
-    </section>
+    <h1>Selected Publications</h1>
+    <p class="section-note">
+        Full list on my <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> · * equal contribution
+    </p>
+    <div id="publications-list">
+        <!-- Rendered by publications.js -->
+    </div>
+</section>
 </main>
 
 <footer>
@@ -52,14 +52,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const list = document.getElementById('publications-list');
 
     publications.forEach(pub => {
-        const badgeHTML = pub.highlight
-            ? <span class="pub-badge pub-badge--${pub.highlight.toLowerCase().replace(/\s+/g, '-')}">${pub.highlight}</span>
+        // Badge opzionale
+        const badgeHTML = pub.badge
+            ? `<span class="pub-badge pub-badge--review">${pub.badge}</span>`
             : '';
 
         const item = document.createElement('div');
-        item.className = 'pub-card'; // <-- questa classe deve combaciare con il CSS
+        item.className = 'pub-card';
 
-        item.innerHTML = 
+        item.innerHTML = `
             <div class="pub-title">
                 <a href="${pub.url}" target="_blank">${pub.title}</a>
             </div>
@@ -67,14 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="pub-meta">
                 <span>${pub.venue}</span>
                 <span>${pub.year}</span>
-                ${badgeHTML}
+                ${badgeHTML}    
             </div>
-        ;
+        `;
 
         list.appendChild(item);
     });
 });
 </script>
-
 </body>
 </html>

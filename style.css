@@ -305,11 +305,6 @@ footer a:hover {
     top: 0;                    /* allinea verticalmente con il testo */
 }
 
-.pub-venue {
-    font-weight: 600;           /* grassetto */
-    color: #2b6cb0;             /* stesso blu dei badge */
-}
-
 @media (max-width: 768px) {
 
     /* ABOUT: foto, nome e bio in colonna */

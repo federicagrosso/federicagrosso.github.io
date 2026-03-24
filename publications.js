@@ -19,7 +19,7 @@ const publications = [
     },
     {
         title: "Causal relationships between gut microbiome and hundreds of age-related traits: evidence of a replicable effect on ApoM protein levels",
-        authors: "<strong>Federica Grosso</strong>, Daniela Zanetti, Serena Sanna",
+        authors: "<strong>F. Grosso</strong>, D. Zanetti, S. Sanna",
         venue: "Aging US",
         url: "https://doi.org/10.18632/aging.206293",
         year: "2025",

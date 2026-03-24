@@ -155,61 +155,8 @@ main {
     text-decoration: underline;
 }
 
-/* PUBLICATIONS */
-#publications-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.pub-card {
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.2rem 1.4rem;
-    background: white;
-    transition: all 0.2s ease;
-}
-
-.pub-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-}
-
-.pub-title a {
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 500;
-}
-
-.pub-title a:hover {
-    color: var(--accent);
-}
-
-.pub-authors {
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-top: 0.3rem;
-}
-
-.pub-meta {
-    font-size: 0.85rem;
-    color: var(--secondary);
-    margin-top: 0.3rem;
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 2rem;
-    color: var(--secondary);
-    font-size: 0.85rem;
-}
-/* Titolo con font come nella main page (Playfair Display) */
-#publications h1 {
+/* PUBLICATIONS & BLOG CARDS STILE UNIFICATO */
+section h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.4rem;
     margin-bottom: 0.5rem;
@@ -218,31 +165,34 @@ footer {
 }
 
 /* Riga blu sotto il titolo */
-#publications h1::after {
+section h1::after {
     content: "";
     display: block;
-    width: 60px; /* lunghezza della linea */
-    height: 3px;  /* spessore della linea */
+    width: 60px;
+    height: 3px;
     background-color: var(--accent);
     margin-top: 4px;
 }
 
-/* “Full list on Google Scholar” più piccolo e con più spazio */
-.section-note {
+/* Tagline / note sotto titolo */
+.section-note, .tagline {
     font-size: 0.85rem;
     color: var(--secondary);
-    margin-bottom: 1.5rem; /* spazio maggiore tra testo e lista */
+    margin-bottom: 1.5rem;
 }
 
-/* Pubblicazioni */
-#publications-list {
+/* Container cards */
+#publications-list,
+#blog-posts {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 0; /* margine già dato dalla section-note */
+    margin-top: 0; /* margine già dato dalla tagline o section-note */
 }
 
-.pub-card {
+/* Card */
+.pub-card,
+.blog-post-item {
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 1.2rem 1.4rem;
@@ -250,27 +200,37 @@ footer {
     transition: all 0.2s ease;
 }
 
-.pub-card:hover {
+.pub-card:hover,
+.blog-post-item:hover {
     border-color: var(--accent);
     transform: translateY(-2px);
 }
 
-.pub-title a {
-    text-decoration: none;
-    color: var(--text);
+/* Titolo link */
+.pub-title a,
+.blog-post-title {
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    display: block;
+    margin-top: 0.3rem;
 }
 
-.pub-title a:hover {
+.pub-title a:hover,
+.blog-post-title:hover {
     color: var(--accent);
 }
 
-.pub-authors {
+/* Autori / descrizione */
+.pub-authors,
+.blog-post-desc {
     font-size: 0.9rem;
     color: var(--secondary);
     margin-top: 0.3rem;
 }
 
+/* Metadata e badge */
 .pub-meta {
     font-size: 0.85rem;
     color: var(--secondary);
@@ -278,19 +238,10 @@ footer {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
+    align-items: center; /* centra badge verticalmente */
 }
 
 /* Badge IN REVIEW */
-.pub-meta {
-    font-size: 0.85rem;
-    color: var(--secondary);
-    margin-top: 0.3rem;
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    align-items: center; /* allinea badge al centro verticale */
-}
-
 .pub-badge {
     display: inline-block;
     padding: 0.2rem 0.5rem;
@@ -301,9 +252,14 @@ footer {
     background-color: #cfe2f3;   /* sfondo azzurro chiaro */
     color: #2b6cb0;              /* testo blu scuro */
     margin-left: 0.3rem;
-    line-height: 1.2;            /* fa stare bene il testo dentro lo span */
+    line-height: 1.2;
 }
 
+/* Data post blog */
+.blog-post-date {
+    font-size: 0.85rem;
+    color: var(--secondary);
+}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

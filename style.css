@@ -307,25 +307,20 @@ footer a:hover {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    nav .nav-container {
-        flex-direction: column;
-        align-items: flex-start; /* oppure center se vuoi centrato */
-        gap: 0.5rem;
+    .nav-container {
+        padding: 0.5rem 1rem;  /* meno padding verticale */
+    }
+
+    .nav-name {
+        font-size: 1.2rem;     /* più piccolo */
+        font-weight: 600;
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
+        gap: 1rem;             /* meno spazio tra i link */
     }
 
-    nav ul li {
-        width: 100%;
-    }
-
-    nav ul li a {
-        display: block;
-        width: 100%;
-        padding: 0.5rem 0;
+    nav a {
+        font-size: 0.9rem;     /* testo dei link leggermente più piccolo */
     }
 }

@@ -281,16 +281,27 @@ footer {
 }
 
 /* Badge IN REVIEW */
+.pub-meta {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-top: 0.3rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center; /* allinea badge al centro verticale */
+}
+
 .pub-badge {
     display: inline-block;
     padding: 0.2rem 0.5rem;
     font-size: 0.7rem;
     font-weight: 600;
-    border-radius: 8px; /* bordi arrotondati */
-    border: 1px solid #2b6cb0; /* bordo azzurro scuro */
-    background-color: #cfe2f3; /* sfondo azzurro chiaro */
-    color: #2b6cb0; /* testo blu scuro */
-    margin-left: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #2b6cb0;   /* bordo blu scuro */
+    background-color: #cfe2f3;   /* sfondo azzurro chiaro */
+    color: #2b6cb0;              /* testo blu scuro */
+    margin-left: 0.3rem;
+    line-height: 1.2;            /* fa stare bene il testo dentro lo span */
 }
 
 

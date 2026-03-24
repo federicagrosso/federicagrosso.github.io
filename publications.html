@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     publications.forEach(pub => {
         // Badge opzionale
-        const badgeHTML = pub.badge
-            ? `<span class="pub-badge pub-badge--review">${pub.badge}</span>`
-            : '';
+       const badgeHTML = pub.badge
+    ? `<span class="pub-badge">${pub.badge}</span>`
+    : '';
 
         const item = document.createElement('div');
         item.className = 'pub-card';

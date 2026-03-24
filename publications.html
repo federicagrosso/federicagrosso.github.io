@@ -51,9 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const list = document.getElementById('publications-list');
 
     publications.forEach(pub => {
+        // Badge
         const badgeHTML = pub.badge
             ? `<span class="pub-badge">${pub.badge}</span>`
             : '';
+
+        // Venue in grassetto se non è "Preprint"
+        const venueHTML = pub.venue !== "Preprint"
+            ? `<strong>${pub.venue}</strong>`
+            : pub.venue;
 
         const item = document.createElement('div');
         item.className = 'pub-card';
@@ -64,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <div class="pub-authors">${pub.authors}</div>
             <div class="pub-meta">
-                <span>${pub.venue}</span>
+                <span>${venueHTML}</span>
                 <span>(${pub.year})</span>
                 ${badgeHTML}    
             </div>

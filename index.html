@@ -3,96 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Federica Grosso — PhD Candidate in Statistical Genetics">
     <title>Federica Grosso</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- NAVBAR -->
 <nav>
-    <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="CV.html">CV</a></li>
-        <li><a href="blog.html">Blog</a></li>
-    </ul>
+    <div class="nav-container">
+        <div class="nav-name">Federica Grosso</div>
+        <ul>
+            <li><a href="#about">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="CV.html">CV</a></li>
+        </ul>
+    </div>
 </nav>
 
 <main>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="about-header">
-            <div class="about-header-text">
-                <h1>Federica Grosso</h1>
-                <p class="tagline">
-                    PhD Candidate @ CNCR-CTGlab · Statistical Genetics · VU Amsterdam
+<!-- ABOUT -->
+<section id="about">
+    <div class="about-container">
+
+        <!-- LEFT COLUMN -->
+        <div class="about-left">
+            <img src="picture.jpg" alt="Federica Grosso" class="profile-photo">
+
+            <div class="social-links">
+                <a href="mailto:federicagrosso31@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/federica-grosso-632958269" target="_blank">LinkedIn</a>
+                <a href="https://github.com/federicagrosso" target="_blank">GitHub</a>
+                <a href="#">Google Scholar</a>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="about-right">
+            <h1>Federica Grosso</h1>
+            <p class="tagline">
+                PhD Candidate · Statistical Genetics · Vrije Universiteit Amsterdam
+            </p>
+
+            <div class="bio">
+                <p><strong>Welcome!</strong></p>
+
+                <p>
+                    I am a PhD candidate at Vrije Universiteit Amsterdam, focusing on the development
+                    of statistical methods to uncover causal relationships in complex traits,
+                    particularly neuropsychiatric disorders.
+                </p>
+
+                <p>
+                    My background is in Mathematics and Biostatistics. During my Master's thesis
+                    at IRGB-CNR, I developed a strong interest in genetics and causal inference.
+                </p>
+
+                <p>
+                    I have worked extensively with Mendelian Randomization and longitudinal data,
+                    aiming to improve robustness and methodological validity.
                 </p>
             </div>
-
-            <img src="picture.jpg" alt="Federica Grosso" class="profile-photo">
         </div>
 
-        <div class="bio-box">
-            <p>Welcome!</p>
+    </div>
+</section>
 
-            <p>
-                I am a PhD candidate at <strong>Vrije Universiteit Amsterdam</strong>,
-                focusing on the development of methods to uncover new insights into
-                complex traits, particularly neuropsychiatric disorders.
-            </p>
+<!-- NEWS -->
+<section id="news">
+    <h2>News</h2>
 
-            <p>
-                My academic background includes a Bachelor's degree in Mathematics
-                and a Master's degree in Biostatistics.
-            </p>
+    <div class="news-item">
+        <span class="news-date">Mar 2026</span>
+        <p>Started PhD at Vrije Universiteit Amsterdam.</p>
+    </div>
 
-            <p>
-                During my Master's thesis at IRGB-CNR in Cagliari, I developed a strong
-                interest in genetics. I later worked as a researcher using Mendelian
-                Randomization and exploring causal inference for longitudinal data.
-            </p>
+    <div class="news-item">
+        <span class="news-date">Feb 2026</span>
+        <p>Presented at Journal Club on proteomics and ageing.</p>
+    </div>
 
-            <p>
-                Previously, I worked on microbiome and age-related traits using
-                Two-Sample Mendelian Randomization and related methods.
-            </p>
-
-            <p><strong>Feel free to contact me via email.</strong></p>
-        </div>
-
-        <div class="social-links">
-            <a href="mailto:federicagrosso31@gmail.com">📧 Email</a>
-            <a href="https://linkedin.com/in/federica-grosso-632958269" target="_blank">LinkedIn</a>
-            <a href="https://github.com/federicagrosso" target="_blank">GitHub</a>
-            <a href="#">Google Scholar</a>
-        </div>
-    </section>
-
-    <!-- BLOG TEASER -->
-    <section id="blog">
-        <h2>Blog</h2>
-        <p class="section-note">
-            Thoughts on research, PhD life, and data analysis.
-        </p>
-
-        <div id="blog-posts-teaser"></div>
-
-        <a href="blog.html" class="view-all">View all posts →</a>
-    </section>
+    <div class="news-item">
+        <span class="news-date">2025</span>
+        <p>Worked on microbiome and Mendelian Randomization projects.</p>
+    </div>
+</section>
 
 </main>
 
 <footer>
     <p>© 2026 Federica Grosso</p>
 </footer>
-
-<script src="blog-teaser.js"></script>
 
 </body>
 </html>

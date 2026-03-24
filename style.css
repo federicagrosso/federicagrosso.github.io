@@ -265,14 +265,12 @@ footer {
     width: 100%;
     padding: 2rem 0;
     background: var(--bg);
-    display: flex;
-    justify-content: center; /* centra tutto orizzontalmente */
-    align-items: center;     /* centra verticalmente */
+    text-align: center;
     color: var(--secondary);
     font-size: 0.85rem;
 
     /* linea sottile sopra il footer in grigio */
-    border-top: 1px solid var(--border); /* grigio chiaro */
+    border-top: 1px solid var(--border);
 }
 
 footer a {

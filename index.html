@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Federica Grosso — PhD Candidate in Statistical Genetics">
     <title>Federica Grosso</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="CV.html">CV</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -23,49 +25,65 @@
 
 <main>
 
-    <!-- ── About ── -->
+    <!-- ABOUT -->
     <section id="about">
         <div class="about-header">
             <div class="about-header-text">
                 <h1>Federica Grosso</h1>
-                <p class="tagline">PhD Candidate @CNCR-CTGlab &middot; Statistical Genetics &middot; VU Amsterdam </p>
+                <p class="tagline">
+                    PhD Candidate @ CNCR-CTGlab · Statistical Genetics · VU Amsterdam
+                </p>
             </div>
+
             <img src="picture.jpg" alt="Federica Grosso" class="profile-photo">
         </div>
 
         <div class="bio-box">
             <p>Welcome!</p>
+
             <p>
-            I am a PhD candidate at <strong>Vrije Universiteit Amsterdam</strong>, focusing on the development of methods to uncover new insights into complex traits, particularly neuropsychiatric disorders.
-            My academic background includes a Bachelor's degree in Mathematics and a Master's degree in Biostatistics.
-            During my Master's thesis at IRGB-CNR in Cagliari, I developed a strong interest in genetics, which led me to work as a researcher using techniques such as Mendelian Randomization and exploring causal inference for longitudinal data.
-           
+                I am a PhD candidate at <strong>Vrije Universiteit Amsterdam</strong>,
+                focusing on the development of methods to uncover new insights into
+                complex traits, particularly neuropsychiatric disorders.
             </p>
+
             <p>
-                Previously, I worked on microbiome and age-related traits, using Two-Sample Mendelian Randomization
-                and other causal inference methods.
+                My academic background includes a Bachelor's degree in Mathematics
+                and a Master's degree in Biostatistics.
             </p>
-            <p><strong>Feel free to contact me via email!</strong> </p>
+
+            <p>
+                During my Master's thesis at IRGB-CNR in Cagliari, I developed a strong
+                interest in genetics. I later worked as a researcher using Mendelian
+                Randomization and exploring causal inference for longitudinal data.
+            </p>
+
+            <p>
+                Previously, I worked on microbiome and age-related traits using
+                Two-Sample Mendelian Randomization and related methods.
+            </p>
+
+            <p><strong>Feel free to contact me via email.</strong></p>
         </div>
 
         <div class="social-links">
             <a href="mailto:federicagrosso31@gmail.com">📧 Email</a>
-            <a href="https://linkedin.com/in/federica-grosso-632958269" target="_blank">🔗 LinkedIn</a>
-            <a href="https://github.com/federicagrosso" target="_blank">👾 GitHub</a>
-            <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">👩‍💻 Google Scholar</a>
+            <a href="https://linkedin.com/in/federica-grosso-632958269" target="_blank">LinkedIn</a>
+            <a href="https://github.com/federicagrosso" target="_blank">GitHub</a>
+            <a href="#">Google Scholar</a>
         </div>
     </section>
 
-    <hr>
-
-    <!-- ── Blog teaser ── -->
+    <!-- BLOG TEASER -->
     <section id="blog">
         <h2>Blog</h2>
-        <p class="section-note">Recent thoughts on research, PhD life, and data analysis.</p>
-        <div id="blog-posts-teaser">
-            <!-- Rendered by JS -->
-        </div>
-        <a href="blog.html">View all posts →</a>
+        <p class="section-note">
+            Thoughts on research, PhD life, and data analysis.
+        </p>
+
+        <div id="blog-posts-teaser"></div>
+
+        <a href="blog.html" class="view-all">View all posts →</a>
     </section>
 
 </main>
@@ -74,45 +92,6 @@
     <p>© 2026 Federica Grosso</p>
 </footer>
 
-<script src="publications.js"></script>
-<script>
-    const list = document.getElementById('publications-list');
-
-    publications.forEach(pub => {
-        const badgeHTML = pub.highlight
-            ? `<span class="pub-badge pub-badge--${pub.highlight.toLowerCase().replace(/\s+/g, '-')}">${pub.highlight}</span>`
-            : '';
-
-        const item = document.createElement('div');
-        item.className = 'pub-item';
-        item.innerHTML = `
-            <div class="pub-title">${pub.title}</div>
-            <div class="pub-authors">${pub.authors}</div>
-            <div class="pub-venue">
-                <a href="${pub.url}" target="_blank">${pub.venue}</a>
-                <span class="pub-year">(${pub.year})</span>
-                ${badgeHTML}
-            </div>
-        `;
-        list.appendChild(item);
-    });
-
-    // Highlight active nav link based on scroll position
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('nav a');
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                navLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
-                });
-            }
-        });
-    }, { rootMargin: '-20% 0px -70% 0px' });
-
-    sections.forEach(s => observer.observe(s));
-</script>
 <script src="blog-teaser.js"></script>
 
 </body>

@@ -134,6 +134,15 @@ main {
     font-size: 0.9rem;
 }
 
+.social-links a {
+    margin-right: 10px;
+    font-size: 1.5rem; /* dimensione icona */
+    color: #333; /* colore icona */
+}
+.social-links a:hover {
+    color: #0077b5; /* colore al passaggio del mouse */
+}
+
 /* FOOTER */
 footer {
     text-align: center;

@@ -13,12 +13,13 @@ const publications = [
         venue: "Preprint",
         url: "https://doi.org/10.1101/2025.09.16.25335948",
         year: "2025",
-        highlight: null
+        highlight: null,
+        badge: "IN REVIEW"   // <-- aggiunta qui
     },
     {
         title: "Causal relationships between gut microbiome and hundreds of age-related traits: evidence of a replicable effect on ApoM protein levels",
         authors: "<strong>Federica Grosso</strong>, Daniela Zanetti, Serena Sanna",
-        venue: "Aging, 2025",
+        venue: "Aging US",
         url: "https://doi.org/10.18632/aging.206293",
         year: "2025",
         highlight: null

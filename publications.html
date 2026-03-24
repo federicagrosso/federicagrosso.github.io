@@ -31,48 +31,50 @@
 
 <main>
 <section id="publications">
-    <h1>Selected Publications</h1>
-    <p class="section-note">
-        Full list on my <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> · * equal contribution
-    </p>
-    <div id="publications-list">
-        <!-- Rendered by publications.js -->
-    </div>
-</section>
+        <h1>Selected Publications</h1>
+        <div id="publications-list">
+            <!-- Rendered by publications.js -->
+        </div>
+        <p class="section-note">
+            Full list on my <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a>
+        </p>
+    </section>
 </main>
 
 <footer>
     <p>© 2026 Federica Grosso</p>
 </footer>
 
-<script src="publications.js">
+<script src="publications.js"></script>
+<script src="publications.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const list = document.getElementById('publications-list');
 
     publications.forEach(pub => {
-        const badgeHTML = pub.badge
-            ? `<span class="pub-badge">${pub.badge}</span>`  // span separato
+        const badgeHTML = pub.highlight
+            ? <span class="pub-badge pub-badge--${pub.highlight.toLowerCase().replace(/\s+/g, '-')}">${pub.highlight}</span>
             : '';
 
         const item = document.createElement('div');
-        item.className = 'pub-card';
+        item.className = 'pub-card'; // <-- questa classe deve combaciare con il CSS
 
-        item.innerHTML = `
+        item.innerHTML = 
             <div class="pub-title">
                 <a href="${pub.url}" target="_blank">${pub.title}</a>
             </div>
             <div class="pub-authors">${pub.authors}</div>
             <div class="pub-meta">
-                <span class="pub-venue">${pub.venue}</span>
-                <span class="pub-year">${pub.year}</span>
-                ${badgeHTML} 
+                <span>${pub.venue}</span>
+                <span>${pub.year}</span>
+                ${badgeHTML}
             </div>
-        `;
+        ;
 
         list.appendChild(item);
     });
 });
 </script>
+
 </body>
 </html>

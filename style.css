@@ -351,7 +351,7 @@ footer a:hover {
     }
 
     nav .nav-name {
-        display: none;         /* nome già sopra foto, nascondiamo qui */
+        display: none;         /* nome già sopra foto */
     }
 
     nav ul {
@@ -374,13 +374,35 @@ footer a:hover {
         padding: 0 1rem;
     }
 
-    /* CV rombi più piccoli */
+    /* CV: rombi più piccoli e centrati verticalmente */
     .cv-list li::before {
-        font-size: 1rem;
+        content: "◆";           /* rombo pieno */
+        color: var(--accent);   
+        font-size: 0.8rem;      /* più piccolo */
+        line-height: 1;          /* allinea con il testo */
+        position: absolute;
         left: 0.2rem;
+        top: 0.3rem;             /* centratura verticale */
     }
 
     .cv-list li {
-        padding-left: 1.5rem;
+        padding-left: 1.5rem;    /* distanza dal testo */
+        margin-bottom: 0.6rem;   /* spazio tra voci */
+    }
+
+    /* Pubblicazioni: badge e venue già blu, full width */
+    .pub-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .pub-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .pub-venue {
+        font-weight: 600;
+        color: #2b6cb0;
     }
 }

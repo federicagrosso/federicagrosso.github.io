@@ -1,7 +1,7 @@
 const publications = [
     {
         title: "Longitudinal plasma proteomics along a menstrual cycle highlights the regulatory effect of sex hormones on inflammatory and cardiometabolic circuits",
-        authors: "Serena Sanna, Daria Zhernakova, <strong>Federica Grosso</strong>, Fabio Chillotti, Fabio Busonero, Silvia Camarda, Myriam Viscito, Stefania Lenarduzzi, Simona Incollu, Giulia Beltrame Vriz et al.",
+        authors: "D.V. Zhernakova*, <strong>F. Grosso*</strong>, F. Chillotti*, et al.",
         venue: "Preprint",
         url: "https://doi.org/10.21203/rs.3.rs-9148671/v1",
         year: "2026",

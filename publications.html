@@ -46,16 +46,14 @@
 </footer>
 
 <script src="publications.js"></script>
-<script src="publications.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const list = document.getElementById('publications-list');
 
     publications.forEach(pub => {
-        // Badge opzionale
-       const badgeHTML = pub.badge
-    ? `<span class="pub-badge">${pub.badge}</span>`
-    : '';
+        const badgeHTML = pub.badge
+            ? `<span class="pub-badge">${pub.badge}</span>`
+            : '';
 
         const item = document.createElement('div');
         item.className = 'pub-card';

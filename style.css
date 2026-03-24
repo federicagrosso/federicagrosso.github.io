@@ -279,6 +279,20 @@ footer {
     gap: 0.5rem;
     flex-wrap: wrap;
 }
+
+/* Badge IN REVIEW */
+.pub-badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 4px;
+    color: white;
+}
+
+.pub-badge--review {
+    background-color: var(--accent); /* blu scuro */
+}
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .about-container {

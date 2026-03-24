@@ -271,8 +271,8 @@ footer {
     color: var(--secondary);
     font-size: 0.85rem;
 
-    /* linea sottile sopra il footer */
-    border-top: 1px solid var(--accent); /* colore riga */
+    /* linea sottile sopra il footer in grigio */
+    border-top: 1px solid var(--border); /* grigio chiaro */
 }
 
 footer a {
@@ -283,6 +283,7 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .about-container {

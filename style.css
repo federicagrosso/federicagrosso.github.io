@@ -24,9 +24,9 @@ body {
 
 /* NAVBAR */
 nav {
-    border-bottom: 1px solid var(--border);
+    border-bottom: none;
+    box-shadow: 0 2px 0 0 var(--accent);
 }
-
 .nav-container {
     max-width: var(--max-width);
     margin: auto;
@@ -144,6 +144,11 @@ main {
     font-size: 0.9rem;
 }
 
+.bio p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    hyphens: auto;
+}
 
 /* FOOTER */
 footer {

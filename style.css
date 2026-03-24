@@ -293,9 +293,6 @@ footer {
     margin-left: 0.5rem;
 }
 
-.pub-badge--review {
-    background-color: var(--accent); /* blu scuro */
-}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

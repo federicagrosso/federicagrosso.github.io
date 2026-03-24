@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const list = document.getElementById('publications-list');
 
     publications.forEach(pub => {
-        // badge opzionale solo se definito
+        // Badge opzionale
         const badgeHTML = pub.badge
             ? `<span class="pub-badge pub-badge--review">${pub.badge}</span>`
             : '';
@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="pub-authors">${pub.authors}</div>
             <div class="pub-meta">
                 <span>${pub.venue}</span>
+                ${badgeHTML} 
                 <span>${pub.year}</span>
-                ${badgeHTML}
             </div>
         `;
 
@@ -76,6 +76,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
-
 </body>
 </html>

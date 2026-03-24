@@ -52,12 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const list = document.getElementById('publications-list');
 
     publications.forEach(pub => {
-        const badgeHTML = pub.highlight
-            ? `<span class="pub-badge pub-badge--${pub.highlight.toLowerCase().replace(/\s+/g, '-')}">${pub.highlight}</span>`
+        // badge opzionale solo se definito
+        const badgeHTML = pub.badge
+            ? `<span class="pub-badge pub-badge--review">${pub.badge}</span>`
             : '';
 
         const item = document.createElement('div');
-        item.className = 'pub-card'; // <-- questa classe deve combaciare con il CSS
+        item.className = 'pub-card';
 
         item.innerHTML = `
             <div class="pub-title">

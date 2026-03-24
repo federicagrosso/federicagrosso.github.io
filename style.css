@@ -308,47 +308,24 @@ footer a:hover {
 /* RESPONSIVE */
 /* MOBILE FIXES: navbar e CV list */
 @media (max-width: 768px) {
-    /* Navbar compatta */
-    .nav-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 0.5rem 1rem;
-        gap: 0.5rem;
+    .about-container {
+        grid-template-columns: 1fr;   /* una sola colonna */
+        text-align: center;           /* centra testo e foto */
+        gap: 1.5rem;                  /* spazio verticale tra foto e bio */
     }
 
-    .nav-name {
-        font-size: 1.3rem;
-        font-weight: 600;
-        margin-bottom: 0.3rem;
+    .about-left {
+        margin-bottom: 0;             /* margine extra non serve */
     }
 
-    nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.8rem;
-        width: 100%;
-        padding: 0;
-        margin: 0;
+    .about-right h1 {
+        font-size: 2rem;              /* riduce leggermente il titolo */
     }
 
-    nav ul li {
-        width: auto;
-    }
-
-    nav a {
-        font-size: 0.9rem;
-        padding: 0.3rem 0.5rem;
-        white-space: nowrap;
-    }
-
-    /* CV rombi più piccoli */
-    .cv-list li::before {
-        font-size: 1rem;
-        left: 0.2rem;
-    }
-
-    .cv-list li {
-        padding-left: 1.5rem;
+    .bio p {
+        font-size: 0.95rem;           /* testo leggermente più piccolo */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;              /* evita overflow */
     }
 }

@@ -270,17 +270,9 @@ footer {
     align-items: center;     /* centra verticalmente */
     color: var(--secondary);
     font-size: 0.85rem;
-    position: relative; /* serve per posizionare pseudo-elemento */
-}
 
-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;                /* in cima al footer */
-    left: 0;
-    width: 100%;
-    height: 1px;           /* spessore della riga */
-    background-color: var(--accent); /* colore riga */
+    /* linea sottile sopra il footer */
+    border-top: 1px solid var(--accent); /* colore riga */
 }
 
 footer a {

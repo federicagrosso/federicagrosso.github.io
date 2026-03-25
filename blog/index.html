@@ -35,46 +35,12 @@
 
         <!-- Ultimi 2 post -->
         <h2>Latest Posts</h2>
-        <div id="latest-posts">
-            <div class="blog-post-item">
-                <div class="blog-post-date">March 23, 2026</div>
-                <a class="blog-post-title" href="posts/post1.html">Simulating Longitudinal Data for Causal Inference</a>
-                <p class="blog-post-desc">A step-by-step explanation of generating synthetic longitudinal datasets to compare SEM, MSM, VAR, and Granger methods for causal analysis.</p>
-            </div>
-
-            <div class="blog-post-item">
-                <div class="blog-post-date">March 20, 2026</div>
-                <a class="blog-post-title" href="posts/post2.html">Exploring Mendelian Randomization in Microbiome Research</a>
-                <p class="blog-post-desc">Discussion on the applications and pitfalls of MR techniques when studying causal links between gut microbiome and aging phenotypes.</p>
-            </div>
-        </div>
+        <div id="latest-posts"></div>
         <a href="posts/index.html" class="section-link">See all posts →</a>
 
         <!-- Ultime 2 pipelines -->
         <h2>Latest Pipelines</h2>
-        <div id="latest-pipelines">
-
-    <div class="blog-post-item">
-        <div class="blog-post-date">March 23, 2026</div>
-        <a class="blog-post-title" href="pipelines/pipeline1.html">
-            Causal Analysis Workflow: SEM, MSM, VAR
-        </a>
-        <p class="blog-post-desc">
-            Step-by-step guide on generating longitudinal synthetic datasets and applying multiple causal inference methods.
-        </p>
-    </div>
-
-    <div class="blog-post-item">
-        <div class="blog-post-date">March 20, 2026</div>
-        <a class="blog-post-title" href="pipelines/pipeline2.html">
-            Mendelian Randomization in Microbiome Research
-        </a>
-        <p class="blog-post-desc">
-            Practical workflow to perform MR using gut microbiome and aging phenotype data.
-        </p>
-    </div>
-
-</div>
+        <div id="latest-pipelines"></div>
         <a href="pipelines/index.html" class="section-link">See all pipelines →</a>
     </section>
 </main>
@@ -82,6 +48,37 @@
 <footer>
     <p>© 2026 Federica Grosso</p>
 </footer>
+
+<!-- Script per caricare automaticamente le ultime 2 voci -->
+<script>
+async function loadLatest(containerId, filePath) {
+    const container = document.getElementById(containerId);
+    try {
+        const response = await fetch(filePath);
+        const text = await response.text();
+
+        // Trasforma il file HTML in DOM
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, "text/html");
+
+        // Prendi i div dei post/pipeline
+        const items = doc.querySelectorAll("#blog-posts .blog-post-item");
+        if (items.length === 0) return;
+
+        // Mostra solo i primi 2
+        for (let i = 0; i < Math.min(2, items.length); i++) {
+            const clone = items[i].cloneNode(true);
+            container.appendChild(clone);
+        }
+    } catch (err) {
+        console.error("Error loading latest content:", err);
+    }
+}
+
+// Carica ultimi 2 post e ultime 2 pipelines
+loadLatest("latest-posts", "posts/index.html");
+loadLatest("latest-pipelines", "pipelines/index.html");
+</script>
 
 </body>
 </html>

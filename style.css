@@ -318,7 +318,10 @@ footer a:hover {
     font-weight: 600;           /* grassetto */
     color: #2b6cb0;             /* stesso blu dei badge */
 }
-
+.section-link {
+    display: inline-block;
+    margin: 20px 0 40px 0;
+}
 @media (max-width: 768px) {
 
     /* ABOUT: foto, nome e bio in colonna */

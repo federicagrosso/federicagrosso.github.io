@@ -319,9 +319,11 @@ footer a:hover {
     color: #2b6cb0;             /* stesso blu dei badge */
 }
 
-#latest-posts h2,
-#latest-pipelines h2 {
-    margin-bottom: 20px; /* spazio tra titolo e lista */
+#latest-posts,
+#latest-pipelines {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* aumenta spazio tra titolo e quadrati */
 }
 
 #latest-posts,

@@ -91,6 +91,24 @@ main {
     margin-bottom: 1rem;
 }
 
+.profile-photo {
+    width: 160px;                 /* larghezza maggiore per ovale */
+    height: 200px;                /* altezza maggiore per effetto verticale */
+    object-fit: cover;
+    object-position: center top;
+    
+    border-radius: 50% / 40%;     /* rende l'immagine ovale */
+    border: 4px solid #2b6cb0;    /* bordo blu elegante */
+    
+    /* Ombra morbida */
+    box-shadow:
+        0 6px 20px rgba(43, 108, 176, 0.2),
+        0 0 0 6px rgba(43, 108, 176, 0.1);
+    
+    display: block;
+    margin: 0 auto 1rem auto;     /* centra l'immagine nella colonna */
+}
+
 
 /* SOCIAL LINKS */
 .social-links {

@@ -324,6 +324,13 @@ footer a:hover {
     margin-bottom: 10px; /* spazio tra titolo e lista */
 }
 
+#latest-posts,
+#latest-pipelines {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem; /* aumenta lo spazio tra i quadrati dei post */
+}
+
 .section-link {
     display: inline-block;
     margin: 10px 0 40px 0; /* margine sopra piccolo, sotto quello che vuoi per separare dalla sezione successiva */

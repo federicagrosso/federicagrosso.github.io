@@ -367,6 +367,49 @@ main h2 {
     line-height: 1.3;      /* opzionale, migliora leggibilità */
 }
 
+/* Menu dropdown */
+nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li.dropdown .dropdown-content {
+    display: none; /* nascosto di default */
+    position: absolute;
+    top: 100%; /* subito sotto il link */
+    left: 0;
+    background-color: var(--bg);
+    min-width: 140px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    z-index: 1000;
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
+
+nav ul li.dropdown .dropdown-content li {
+    width: 100%;
+    padding: 0;
+}
+
+nav ul li.dropdown .dropdown-content li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+nav ul li.dropdown .dropdown-content li a:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+/* Mostra il dropdown al hover */
+nav ul li.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 768px) {
 
     /* ABOUT: foto, nome e bio in colonna */

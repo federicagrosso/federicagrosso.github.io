@@ -21,6 +21,16 @@ body {
     background: var(--bg);
 }
 
+a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
 /* NAVBAR */
 nav {
     border-bottom: none;

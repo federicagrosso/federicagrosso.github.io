@@ -84,14 +84,6 @@ main {
 }
 
 .profile-photo {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-}
-
-.profile-photo {
     width: 160px;                 /* larghezza maggiore per ovale */
     height: 200px;                /* altezza maggiore per effetto verticale */
     object-fit: cover;
@@ -106,7 +98,16 @@ main {
         0 0 0 6px rgba(43, 108, 176, 0.1);
     
     display: block;
+    clip-path: ellipse(50% 45% at 50% 50%);
     margin: 0 auto 1rem auto;     /* centra l'immagine nella colonna */
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 

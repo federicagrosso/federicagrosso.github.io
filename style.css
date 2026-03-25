@@ -341,7 +341,7 @@ footer a:hover {
 
 #latest-posts h2,
 #latest-pipelines h2 {
-    margin-bottom: 2rem; /* spazio tra titolo e contenuto */
+    margin-bottom: 1.2rem; /* spazio tra titolo e contenuto */
 }
 
 #latest-posts,

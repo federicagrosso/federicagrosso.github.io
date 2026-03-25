@@ -326,11 +326,11 @@ footer a:hover {
 
 .section-link {
     display: inline-block;
-    margin: 30px 0 40px 0; /* margine sopra (10px) e soprattutto sotto (30px) */
+    margin: 10px 0 40px 0; /* margine sopra piccolo, sotto quello che vuoi per separare dalla sezione successiva */
 }
 
 #latest-pipelines {
-    margin-bottom: 40px; /* spazio tra Pipelines e sezione successiva */
+    margin-bottom: 0; /* niente spazio extra: lascia gestire il link */
 }
 
 @media (max-width: 768px) {

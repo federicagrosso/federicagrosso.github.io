@@ -6,7 +6,7 @@ const publications = [
         url: "https://doi.org/10.21203/rs.3.rs-9148671/v1",
         year: "2026",
         highlight: null,
-        badge: "SUBMITTED"
+        badge: "IN REVIEW"
     },
     {
         title: "Exploring sex-specific causal links between thousands of proteins and lipid metabolism using the UK Biobank Pharma proteomics data",
